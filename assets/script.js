@@ -14,6 +14,22 @@ function generatePassword() {
     generatePassword();
 
   }
+
+  var includeLower = prompt("Would you like to include lowercase letters? Reply: Yes or No")
+  if (includeLower.toUpperCase() === 'YES') {
+
+    return includeLower
+
+  } else if (includeLower.toUpperCase() === 'NO') {
+
+    return includeLower
+
+  } else {
+
+    alert('Invalid Entry')
+    generatePassword();
+    
+  }
 }
 
 
