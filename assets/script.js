@@ -7,9 +7,12 @@ function generatePassword() {
   if (passwordLength >= 8 && passwordLength <= 128) {
 
     return passwordLength;
+
   } else {
 
-    prompt("Please enter a number that is at least 8 and less than 128")
+    alert('Invalid Entry');
+    generatePassword();
+
   }
 }
 
