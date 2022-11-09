@@ -9,7 +9,8 @@ var specialchars = "";
 var charSet = "";
 var final = "";
 
-function passwordPrompt () {
+// Prompts user for password lengths
+function passwordLengthPrompt () {
   var passwordLength = prompt("Pleaae choose the length of the password (at least 8 charaters, less than 128 characters)");
   if (passwordLength >= 8 && passwordLength <= 128) {
 
@@ -23,25 +24,9 @@ function passwordPrompt () {
   }
 }
 
-// Prompt criteria for password
-function generatePassword() {
-  passwordPrompt();
-  // Prompts for Length of Password
-  // function passwordPrompt () {
-  //   var passwordLength = prompt("Pleaae choose the length of the password (at least 8 charaters, less than 128 characters)");
-  //   if (passwordLength >= 8 && passwordLength <= 128) {
-  
-  //     length = passwordLength;
-  
-  //   } else {
-  
-  //     alert('Invalid Entry');
-  //     passwordPrompt();
-  
-  //   }
-  // }
+// Prompts for use of Lower Case Letters
+function lowercasePrompt () {
 
-  // Prompts for use of Lower Case Letters
   var includeLower = prompt("Would you like to include lowercase letters? Reply: Yes or No")
   if (includeLower.toUpperCase() === 'YES') {
 
@@ -54,9 +39,32 @@ function generatePassword() {
   } else {
 
     alert('Invalid Entry');
-    generatePassword();
+    lowercasePrompt();
 
   }
+}
+
+// Prompt criteria for password
+function generatePassword() {
+  passwordLengthPrompt();
+  lowercasePrompt();
+
+  // Prompts for use of Lower Case Letters
+  // var includeLower = prompt("Would you like to include lowercase letters? Reply: Yes or No")
+  // if (includeLower.toUpperCase() === 'YES') {
+
+  //   lowercase = "abcdefghijklmnopqrstuvwxyz";
+
+  // } else if (includeLower.toUpperCase() === 'NO') {
+
+  //   lowercase = "";
+
+  // } else {
+
+  //   alert('Invalid Entry');
+  //   generatePassword();
+
+  // }
 
   // Prompts for use of Upper Case Letters
   var includeUpper = prompt("Would you like to include uppercase letters? Reply: Yes or No");
