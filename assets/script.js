@@ -1,15 +1,22 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+var length = 0;
+var lowercase = "";
+var uppercase = "";
+var numeric = ""
+var specialchars = "";
+var charSet = "";
+var final = "";
 // Prompt criteria for password
 function generatePassword() {
-  var length = 0;
-  var lowercase = "";
-  var uppercase = "";
-  var numeric = ""
-  var specialchars = "";
-  var charSet = "";
-  var final = "";
+  // var length = 0;
+  // var lowercase = "";
+  // var uppercase = "";
+  // var numeric = ""
+  // var specialchars = "";
+  // var charSet = "";
+  // var final = "";
 
   // Prompts for Length of Password
   var passwordLength = prompt("Pleaae choose the length of the password (at least 8 charaters, less than 128 characters)");
@@ -100,7 +107,7 @@ function generatePassword() {
     final += charSet.charAt(Math.floor(Math.random() * charSet.length));
   }
 
-return final
+return final;
 }
 
 
