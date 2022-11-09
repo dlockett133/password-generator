@@ -16,6 +16,7 @@ function passwordLengthPrompt () {
   if (passwordLength >= 8 && passwordLength <= 128) {
 
     length = passwordLength;
+    count++;
 
   } else {
 
@@ -32,7 +33,8 @@ function lowercasePrompt () {
   if (includeLower.toUpperCase() === 'YES') {
 
     lowercase = "abcdefghijklmnopqrstuvwxyz";
-
+    count++;
+    
   } else if (includeLower.toUpperCase() === 'NO') {
 
     lowercase = "";
@@ -52,7 +54,8 @@ function upperCasePrompt () {
   if (includeUpper.toUpperCase() === 'YES') {
 
     uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
+    count++;
+    
   } else if (includeUpper.toUpperCase() === 'NO') {
 
     uppercase = "";
@@ -73,7 +76,8 @@ function numericPrompt () {
   if (includenumbers.toUpperCase() === 'YES') {
  
     numeric = "1234567890"
- 
+    count++;
+    
   } else if (includenumbers.toUpperCase() === 'NO') {
  
     numeric = "";
@@ -93,7 +97,8 @@ function specialCharsPrompt () {
   if (includeSpecialChars.toUpperCase() === 'YES') {
   
     specialchars = " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
-  
+    count++;
+    
   } else if (includeSpecialChars.toUpperCase() === 'NO') {
   
     specialchars = "";
