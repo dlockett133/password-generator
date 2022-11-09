@@ -85,45 +85,32 @@ function numericPrompt () {
   }
 }
 
+// Prompts for use of Special Characters
+function specialCharsPrompt () {
+
+  var includeSpecialChars = prompt(`Would you like to include "Special" characters? Ex: !"#$%& Reply: Yes or No`);
+  if (includeSpecialChars.toUpperCase() === 'YES') {
+  
+    specialchars = " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+  
+  } else if (includeSpecialChars.toUpperCase() === 'NO') {
+  
+    specialchars = "";
+  
+  } else {
+  
+    alert('Invalid Entry');
+    specialCharsPrompt();
+  }
+}
+
 // Prompt criteria for password
 function generatePassword() {
   passwordLengthPrompt();
   lowercasePrompt();
   upperCasePrompt();
-
-  // // Prompts for use of Numeric Characters
-  // var includenumbers = prompt(`Would you like to include "numeric" characters? Ex: 12345 Reply: Yes or No`);
-  // if (includenumbers.toUpperCase() === 'YES') {
-
-  //   numeric = "1234567890"
-
-  // } else if (includenumbers.toUpperCase() === 'NO') {
-
-  //   numeric = "";
-
-  // } else {
-
-  //   alert('Invalid Entry');
-  //   generatePassword();
-
-  // }
-
-  // Prompts for use of Special Characters
-  var includeSpecialChars = prompt(`Would you like to include "Special" characters? Ex: !"#$%& Reply: Yes or No`);
-  if (includeSpecialChars.toUpperCase() === 'YES') {
-
-    specialchars = " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
-
-  } else if (includeSpecialChars.toUpperCase() === 'NO') {
-
-    specialchars = "";
-
-  } else {
-
-    alert('Invalid Entry');
-    generatePassword();
-
-  }
+  numericPrompt();
+  specialCharsPrompt();
 
   charSet = lowercase + uppercase + numeric + specialchars;
 
