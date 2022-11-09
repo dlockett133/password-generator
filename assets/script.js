@@ -44,27 +44,31 @@ function lowercasePrompt () {
   }
 }
 
+ // Prompts for use of Upper Case Letters
+ function upperCasePrompt () {
+  
+   var includeUpper = prompt("Would you like to include uppercase letters? Reply: Yes or No");
+   if (includeUpper.toUpperCase() === 'YES') {
+  
+     uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  
+   } else if (includeUpper.toUpperCase() === 'NO') {
+  
+     uppercase = "";
+  
+   } else {
+  
+     alert('Invalid Entry');
+     upperCasePrompt();
+  
+   }
+ }
+
 // Prompt criteria for password
 function generatePassword() {
   passwordLengthPrompt();
   lowercasePrompt();
-
-  // Prompts for use of Lower Case Letters
-  // var includeLower = prompt("Would you like to include lowercase letters? Reply: Yes or No")
-  // if (includeLower.toUpperCase() === 'YES') {
-
-  //   lowercase = "abcdefghijklmnopqrstuvwxyz";
-
-  // } else if (includeLower.toUpperCase() === 'NO') {
-
-  //   lowercase = "";
-
-  // } else {
-
-  //   alert('Invalid Entry');
-  //   generatePassword();
-
-  // }
+  upperCasePrompt();
 
   // Prompts for use of Upper Case Letters
   var includeUpper = prompt("Would you like to include uppercase letters? Reply: Yes or No");
