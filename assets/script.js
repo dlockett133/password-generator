@@ -16,12 +16,12 @@ function passwordLengthPrompt () {
   if (passwordLength >= 8 && passwordLength <= 128) {
 
     length = passwordLength;
-    count++;
+    // count++;
 
   } else {
 
     alert('Invalid Entry');
-    passwordPrompt();
+    passwordLengthPrompt();
 
   }
 }
@@ -118,14 +118,21 @@ function generatePassword() {
   numericPrompt();
   specialCharsPrompt();
 
+  // Confirms if at least ONE criteria (besides passwordLegth) is included
+  if (count <= 0) {
+  alert(`Please choose at least ONE criteria.`);
+  generatePassword();
+  }
+
+  // Concatenates all criteria into one string
   charSet = lowercase + uppercase + numeric + specialchars;
 
+  // Using for loop and 'charAt()' method to return a specified character at a specific index in the string
   for (i = 0; i < length; i++) {
-    
-    // Using 'charAt()' method to return a specified character at a specific index in the string
     final += charSet.charAt(Math.floor(Math.random() * charSet.length));
   }
 
+// Returns generated password
 return final;
 }
 
