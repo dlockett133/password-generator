@@ -8,6 +8,7 @@ var numeric = ""
 var specialchars = "";
 var charSet = "";
 var final = "";
+var count = 0;
 
 // Prompts user for password lengths
 function passwordLengthPrompt () {
@@ -44,25 +45,25 @@ function lowercasePrompt () {
   }
 }
 
- // Prompts for use of Upper Case Letters
- function upperCasePrompt () {
-  
-   var includeUpper = prompt("Would you like to include uppercase letters? Reply: Yes or No");
-   if (includeUpper.toUpperCase() === 'YES') {
-  
-     uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  
-   } else if (includeUpper.toUpperCase() === 'NO') {
-  
-     uppercase = "";
-  
-   } else {
-  
-     alert('Invalid Entry');
-     upperCasePrompt();
-  
-   }
- }
+// Prompts for use of Upper Case Letters
+function upperCasePrompt () {
+
+  var includeUpper = prompt("Would you like to include uppercase letters? Reply: Yes or No");
+  if (includeUpper.toUpperCase() === 'YES') {
+
+    uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  } else if (includeUpper.toUpperCase() === 'NO') {
+
+    uppercase = "";
+
+  } else {
+
+    alert('Invalid Entry');
+    upperCasePrompt();
+
+  }
+}
 
 
  // Prompts for use of Numeric Characters
