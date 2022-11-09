@@ -8,17 +8,8 @@ var numeric = ""
 var specialchars = "";
 var charSet = "";
 var final = "";
-// Prompt criteria for password
-function generatePassword() {
-  // var length = 0;
-  // var lowercase = "";
-  // var uppercase = "";
-  // var numeric = ""
-  // var specialchars = "";
-  // var charSet = "";
-  // var final = "";
 
-  // Prompts for Length of Password
+function passwordPrompt () {
   var passwordLength = prompt("Pleaae choose the length of the password (at least 8 charaters, less than 128 characters)");
   if (passwordLength >= 8 && passwordLength <= 128) {
 
@@ -27,9 +18,28 @@ function generatePassword() {
   } else {
 
     alert('Invalid Entry');
-    generatePassword();
+    passwordPrompt();
 
   }
+}
+
+// Prompt criteria for password
+function generatePassword() {
+  passwordPrompt();
+  // Prompts for Length of Password
+  // function passwordPrompt () {
+  //   var passwordLength = prompt("Pleaae choose the length of the password (at least 8 charaters, less than 128 characters)");
+  //   if (passwordLength >= 8 && passwordLength <= 128) {
+  
+  //     length = passwordLength;
+  
+  //   } else {
+  
+  //     alert('Invalid Entry');
+  //     passwordPrompt();
+  
+  //   }
+  // }
 
   // Prompts for use of Lower Case Letters
   var includeLower = prompt("Would you like to include lowercase letters? Reply: Yes or No")
