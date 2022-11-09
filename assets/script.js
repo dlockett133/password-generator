@@ -1,6 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// Variables for criteria
 var length = 0;
 var lowercase = "";
 var uppercase = "";
@@ -8,6 +9,8 @@ var numeric = ""
 var specialchars = "";
 var charSet = "";
 var final = "";
+
+// Keeps count of each criteria that is included
 var count = 0;
 
 // Prompts user for password lengths
@@ -16,7 +19,6 @@ function passwordLengthPrompt () {
   if (passwordLength >= 8 && passwordLength <= 128) {
 
     length = passwordLength;
-    // count++;
 
   } else {
 
@@ -68,7 +70,6 @@ function upperCasePrompt () {
   }
 }
 
-
  // Prompts for use of Numeric Characters
 function numericPrompt () {
 
@@ -110,7 +111,7 @@ function specialCharsPrompt () {
   }
 }
 
-// Prompt criteria for password
+// Prompts/Calls all of the criteria to generate a password
 function generatePassword() {
   passwordLengthPrompt();
   lowercasePrompt();
