@@ -31,13 +31,13 @@ function passwordLengthPrompt () {
 // Prompts for use of Lower Case Letters
 function lowercasePrompt () {
 
-  var includeLower = prompt("Would you like to include lowercase letters? Reply: Yes or No")
-  if (includeLower.toUpperCase() === 'YES') {
+  var includeLower = window.confirm("Would you like to include lowercase letters? Reply: Yes or No")
+  if (includeLower === true) {
 
     lowercase = "abcdefghijklmnopqrstuvwxyz";
     count++;
     
-  } else if (includeLower.toUpperCase() === 'NO') {
+  } else if (includeLower === false) {
 
     lowercase = "";
 
