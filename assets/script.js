@@ -8,7 +8,7 @@ var uppercase = "";
 var numeric = ""
 var specialchars = "";
 var charSet = "";
-var final = "";
+// var final = "";
 
 // Keeps count of each criteria that is included
 var count = 0;
@@ -52,13 +52,13 @@ function lowercasePrompt () {
 // Prompts for use of Upper Case Letters
 function upperCasePrompt () {
 
-  var includeUpper = prompt("Would you like to include uppercase letters? Reply: Yes or No");
-  if (includeUpper.toUpperCase() === 'YES') {
+  var includeUpper = window.confirm("Would you like to include uppercase letters? Reply: Yes or No");
+  if (includeUpper === true) {
 
     uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     count++;
     
-  } else if (includeUpper.toUpperCase() === 'NO') {
+  } else if (includeUpper === false) {
 
     uppercase = "";
 
@@ -73,13 +73,13 @@ function upperCasePrompt () {
  // Prompts for use of Numeric Characters
 function numericPrompt () {
 
-  var includenumbers = prompt(`Would you like to include "numeric" characters? Ex: 12345 Reply: Yes or No`);
-  if (includenumbers.toUpperCase() === 'YES') {
+  var includenumbers = window.confirm(`Would you like to include "numeric" characters? Ex: 12345 Reply: Yes or No`);
+  if (includenumbers === true) {
  
     numeric = "1234567890"
     count++;
     
-  } else if (includenumbers.toUpperCase() === 'NO') {
+  } else if (includenumbers === false) {
  
     numeric = "";
  
@@ -94,13 +94,13 @@ function numericPrompt () {
 // Prompts for use of Special Characters
 function specialCharsPrompt () {
 
-  var includeSpecialChars = prompt(`Would you like to include "Special" characters? Ex: !"#$%& Reply: Yes or No`);
-  if (includeSpecialChars.toUpperCase() === 'YES') {
+  var includeSpecialChars = window.confirm(`Would you like to include "Special" characters? Ex: !"#$%& Reply: Yes or No`);
+  if (includeSpecialChars === true) {
   
     specialchars = " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
     count++;
     
-  } else if (includeSpecialChars.toUpperCase() === 'NO') {
+  } else if (includeSpecialChars === false) {
   
     specialchars = "";
   
@@ -113,6 +113,7 @@ function specialCharsPrompt () {
 
 // Prompts/Calls all of the criteria to generate a password
 function generatePassword() {
+  var final = "";
   passwordLengthPrompt();
   lowercasePrompt();
   upperCasePrompt();
@@ -139,7 +140,8 @@ return final;
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var password = ""
+  password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
