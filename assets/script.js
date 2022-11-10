@@ -113,6 +113,8 @@ function specialCharsPrompt () {
 
 // Prompts/Calls all of the criteria to generate a password
 function generatePassword() {
+
+  //container for generated password
   var final = "";
   passwordLengthPrompt();
   lowercasePrompt();
@@ -134,7 +136,6 @@ function generatePassword() {
     final += charSet.charAt(Math.floor(Math.random() * charSet.length));
   }
 
-// Returns generated password
 return final;
 }
 
