@@ -8,7 +8,6 @@ var uppercase = "";
 var numeric = ""
 var specialchars = "";
 var charSet = "";
-// var final = "";
 
 // Keeps count of each criteria that is included
 var count = 0;
