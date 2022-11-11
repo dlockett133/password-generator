@@ -15,7 +15,7 @@ var count = 0;
 
 // Prompts user for password lengths
 function passwordLengthPrompt () {
-  var passwordLength = prompt("Pleaae choose the length of the password (at least 8 charaters, less than 128 characters)");
+  var passwordLength = prompt("Pleaae enter the length of the password (at least 8 charaters, less than 128 characters)");
   if (passwordLength >= 8 && passwordLength <= 128) {
 
     length = passwordLength;
@@ -31,7 +31,7 @@ function passwordLengthPrompt () {
 // Prompts for use of Lower Case Letters
 function lowercasePrompt () {
 
-  var includeLower = window.confirm("Would you like to include lowercase letters? Reply: Yes or No")
+  var includeLower = window.confirm("Would you like to include lowercase letters?")
   if (includeLower === true) {
 
     lowercase = "abcdefghijklmnopqrstuvwxyz";
@@ -52,7 +52,7 @@ function lowercasePrompt () {
 // Prompts for use of Upper Case Letters
 function upperCasePrompt () {
 
-  var includeUpper = window.confirm("Would you like to include uppercase letters? Reply: Yes or No");
+  var includeUpper = window.confirm("Would you like to include uppercase letters?");
   if (includeUpper === true) {
 
     uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -73,7 +73,7 @@ function upperCasePrompt () {
  // Prompts for use of Numeric Characters
 function numericPrompt () {
 
-  var includenumbers = window.confirm(`Would you like to include "numeric" characters? Ex: 12345 Reply: Yes or No`);
+  var includenumbers = window.confirm(`Would you like to include "numeric" characters? Ex: 12345`);
   if (includenumbers === true) {
  
     numeric = "1234567890"
@@ -94,7 +94,7 @@ function numericPrompt () {
 // Prompts for use of Special Characters
 function specialCharsPrompt () {
 
-  var includeSpecialChars = window.confirm(`Would you like to include "Special" characters? Ex: !"#$%& Reply: Yes or No`);
+  var includeSpecialChars = window.confirm(`Would you like to include "Special" characters? Ex: !"#$%&`);
   if (includeSpecialChars === true) {
   
     specialchars = " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
