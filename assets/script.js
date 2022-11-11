@@ -1,6 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
+var copyBtn = document.querySelector("#copy")
 // Variables for criteria
 var length = 0;
 var lowercase = "";
@@ -150,12 +150,15 @@ function writePassword() {
 }
 
 // Copies generated password to clipboard
-function copy() {
+function copyPassword() {
   //Selects all text from the textarea
   document.querySelector("#password").select();
   document.execCommand('copy');
   window.alert(`Your passward is copied!`);
 }
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+// Add event listerner to copy button
+copyBtn.addEventListener("click", copyPassword);
