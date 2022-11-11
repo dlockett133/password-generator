@@ -149,6 +149,13 @@ function writePassword() {
 
 }
 
+// Copies generated password to clipboard
+function copy() {
+  //Selects all text from the textarea
+  document.querySelector("#password").select();
+  document.execCommand('copy');
+  window.alert(`Your passward is copied!`);
+}
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
