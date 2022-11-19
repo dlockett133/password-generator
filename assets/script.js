@@ -153,7 +153,7 @@ function copyPassword() {
   //Selects all text from the textarea
   document.querySelector("#password").select();
   document.execCommand('copy');
-  window.alert(`Your passward is copied!`);
+  window.alert(`Your password is copied!`);
 }
 
 // Add event listener to generate button
